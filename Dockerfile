@@ -10,6 +10,11 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
 RUN apt-get update
 RUN apt-get install oracle-java8-installer -y
 
+
+# install necessary utilities
+
+RUN apt-get install -y x11-apps gtk2.0 sudo --fix-missing
+
 # install inotify-tools
 
 RUN apt-get install inotify-tools -y
@@ -17,4 +22,9 @@ RUN apt-get install inotify-tools -y
 
 RUN apt-get clean
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
+# add user, set up  sudo and passwd
+
+RUN if ! id $USER >/dev/null 2>&1; then adduser nick; fi
+RUN usermod -a -G sudo $USER
+RUN echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers

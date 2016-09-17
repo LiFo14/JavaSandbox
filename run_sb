@@ -1,0 +1,7 @@
+#!/bin/bash
+
+docker run -ti --rm \
+  -e DISPLAY=$DISPLAY \
+  -u $USER \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  "$@" sandbox bash
