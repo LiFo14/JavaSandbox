@@ -1,5 +1,5 @@
-<h2>Sandbox for testing Java applications</h2>
-<h4>In this image could be tested as console apps, as GUI (AWT/Swing, JavaFX)</h4>
-<br>
-<a href="https://microbadger.com/images/lifo/sandbox" <img src="https://images.microbadger.com/badges/image/lifo/sandbox.svg"></a>
-<a href="https://microbadger.com/images/lifo/sandbox" <img src="https://images.microbadger.com/badges/version/lifo/sandbox.svg"></a>
+## Sandbox for testing Java applications
+#### In this image could be tested as console apps, as GUI (AWT/Swing, JavaFX)
+
+[](https://microbadger.com/images/lifo/sandbox) ![microbadger](https://images.microbadger.com/badges/image/lifo/sandbox.svg) [ ](https://microbadger.com/images/lifo/sandbox) ![microbadger](https://images.microbadger.com/badges/version/lifo/sandbox.svg)
+
