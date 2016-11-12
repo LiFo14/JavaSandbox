@@ -1,7 +1,7 @@
 #!/bin/bash
 
 docker run -i -t --rm -e DISPLAY=$DISPLAY \
- -u $USER \
+ -u docker \
  -v /home/nick/Downloads/:/j/ \
  -v /tmp/.X11-unix:/tmp/.X11-unix \
  "$@" sandbox /bin/bash

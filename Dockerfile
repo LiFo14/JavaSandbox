@@ -4,9 +4,9 @@ MAINTAINER Nick <cyberdak095@gmail.com>
 # add user, set up  sudo and passwd
 
 RUN apt-get update && apt-get install -y sudo \
- && if ! id ${USER} >/dev/null 2>&1; then adduser ${USER}; fi \
- && usermod -aG sudo ${USER} \
- && echo "${USER} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+ && if ! id docker >/dev/null 2>&1; then adduser docker; fi \
+ && usermod -aG sudo docker \
+ && echo "docker ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # install java
 
@@ -23,5 +23,5 @@ RUN apt-get install inotify-tools -y
 
 # install necessary utilities
 
-RUN apt-get install -y libmotif-common && apt-get clean
+RUN apt-get install -y --fix-missing libgtk-3-* && apt-get clean
 
