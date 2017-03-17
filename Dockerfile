@@ -18,7 +18,7 @@ RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true 
 
 # install inotify-tools
 
-RUN apt-get install inotify-tools -y
+#RUN apt-get install inotify-tools -y
 
 
 # install necessary utilities
